@@ -119,7 +119,7 @@ with open("result_all.csv", "w") as fp:
     for i in range(0, NumSampletrain):
         for j in range(0, NumSamplequery):
 
-            conf_matrix[i, j] = match_sift(sift_descp_train[i], sift_descp_query[i])
+            conf_matrix[i, j] = match_sift(sift_descp_train[i], sift_descp_query[j])
 
         best_match_idx = conf_matrix[i,:].argmax()
         matchedpair = filenames_query[best_match_idx] + ',' + filenames_train[i]
