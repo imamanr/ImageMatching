@@ -127,8 +127,6 @@ with open("result_all.csv", "w") as fp:
         print idx[i]
         print matchedpair
         file.writerow(matchedpair)
-        # remove the query Image that matched the original image from search base
-        filenames_query = filenames_query[:best_match_idx] + filenames_query[best_match_idx+1 :]
 
 
 file.close()
