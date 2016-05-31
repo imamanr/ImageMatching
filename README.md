@@ -15,7 +15,8 @@ number of orignal images to number of modified images and is pouplated by the nu
 original image againt all modified images. The index against maximum value is picked as a match for original image 
 in the modified images. SIFT descriptors are robust to rotation, scale and illumination changes, but fail to 
 discriminate in presence of noise and blur. Also due to local similarity of some images, when matching the SIFT feature
-points, some false matches occur,
+points, some false matches occur. The ranking algorithm is based on number of good matches, which may induce quantization
+error.
 
 3rd party Libs:
 
@@ -29,12 +30,13 @@ Future work:
 SIFT descriptors are robust to rotation, scale and illumination changes, but fail to discriminate 
 in presence of noise and blur. Also due to local similarity of some images, when matching the SIFT 
 feature points, some false matches occur. Given more time I will experiment with various fast feature 
-detection algorithms and matching algorithms to improve the accruacy and speed of the algorithm. 
+detection algorithms and matching algorithms to improve the accuracy and speed of the algorithm. 
 
 For Accuracy:
+Explore ranking algorithm criteria based on distances of each feature descriptor
 Explore geometric similarity along with SIFT
 Explore combination of different descriptors to form more robust discriminative feature descriptors.
-
+Experiment with hyperparameter and optimize for best performance.
 
 For Time:
 Explore faster matching algorithms like decision trees
